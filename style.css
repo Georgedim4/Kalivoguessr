@@ -1,0 +1,186 @@
+body {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #c7ddf3, #ffffff);
+  font-family: 'Poppins', sans-serif;
+ 
+
+}
+
+
+
+
+h1 {
+  margin-bottom: 30px;
+}
+
+#map-container {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: auto;
+  border: 2px solid #666;
+  cursor: crosshair;
+}
+
+#zoomed-image {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border: 3px solid #333;
+  margin-bottom: 20px;
+}
+
+#marker, #real-marker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: none;
+}
+
+#real-marker {
+  background: limegreen;
+}
+
+#guess-button, #next-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#guess-button:hover, #next-button:hover {
+  background: #2980b9;
+}
+
+#result {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  animation: pop 0.5s ease forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#line-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation classes for smooth transitions */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+#restart-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #4CAF50; /* green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#restart-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#restart-button:active {
+  transform: scale(0.98);
+}
+
+#game-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgb(238, 238, 238);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+button {
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+#score {
+  font-size: 24px;
+  color: #ff9800;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#map, #zoomed-image {
+  border-radius: 12px;
+  border: 2px solid #ccc;
+}
+
+#progress-bar-container {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 10px;
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}

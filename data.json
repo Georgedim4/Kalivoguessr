@@ -1,0 +1,23 @@
+[
+    {
+      "image": "images/img1.png",
+      "x": 34,
+      "y": 34.5 
+    },
+    {
+      "image": "images/img2.png",
+      "x": 35.5,
+      "y": 10
+    },
+    {
+      "image": "images/img3.png",
+      "x": 22.5,
+      "y": 40.5
+    },
+    {
+      "image":"images/img4.png" ,
+      "x":21  ,
+      "y":38.5
+    }
+  ]
+  

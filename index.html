@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KalivoGuessr</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon_io/favicon-32x32.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container">
+    <h1 >🗽️KalivoGuessr </h1>
+  
+    <div id="progress" style="font-size: 18px; margin-bottom: 15px;"></div>
+    <div id="progress-bar-container">
+      <div id="progress-bar-fill"></div>
+    </div>
+    <div id="game">
+     <img id="zoomed-image" src="images/img1.png" alt="Zoomed View">
+    
+      <h2 id="header">Click on the map where you think this is!</h2>
+     <div id="map-container">
+        <canvas id="line-canvas"></canvas>
+        <img id="map" src="images/map/map.jpg" alt="Map">
+        <div id="marker"></div>
+        <div id="real-marker"></div>
+     </div>
+
+      <button id="guess-button">Submit Guess</button>
+     <button id="next-button" style="display:none;">Next</button>
+
+      <div id="result"></div>
+    
+    </div>
+  <div id="score"></div>
+  <br><br>
+  <button id="restart-button" style="display: none;">Restart Game</button>
+</div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
