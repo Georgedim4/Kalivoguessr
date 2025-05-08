@@ -4,6 +4,38 @@ let currentImageIndex = 0;
 let playerGuess = null;
 let mapEnabled = false;
 let totalScore = 0;
+let selectedMode = 'easy';
+
+// ----- Initialization -----
+document.addEventListener('DOMContentLoaded', () => {
+  setupModeSelection();
+});
+
+// ----- Mode Selection -----
+function setupModeSelection() {
+  const modeButtons = document.querySelectorAll('.mode-button');
+  modeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      selectedMode = button.getAttribute('data-mode');
+      startGame();
+    });
+  });
+}
+
+function startGame() {
+  document.getElementById('mode-selection').style.display = 'none';
+  document.getElementById('game-container').style.display = 'block';
+
+  fetch(`data_${selectedMode}.json`)
+    .then(response => response.json())
+    .then(data => {
+      imagesData = shuffleArray(data);
+      setupCanvas();
+      loadImage();
+    });
+
+  setupEventListeners();
+}
 
 // ----- Utility: Shuffle Array -----
 function shuffleArray(array) {

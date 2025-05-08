@@ -184,3 +184,28 @@ button:hover {
   border-radius: 10px;
   transition: width 0.3s ease;
 }
+
+#mode-selection {
+  text-align: center;
+  padding: 30px;
+  margin: 40px auto;
+  background: #eeeeee;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+}
+
+.mode-button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mode-button:hover {
+  background-color: #2980b9;
+}

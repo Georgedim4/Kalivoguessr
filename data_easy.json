@@ -1,0 +1,12 @@
+[
+    {
+      "image": "images/img1.png",
+      "x": 34,
+      "y": 34.5 
+    },
+    {
+      "image": "images/img2.png",
+      "x": 35.5,
+      "y": 10
+    }
+]
