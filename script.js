@@ -5,12 +5,21 @@ let playerGuess = null;
 let mapEnabled = false;
 let totalScore = 0;
 
+// ----- Utility: Shuffle Array -----
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 // ----- Initialization -----
 document.addEventListener('DOMContentLoaded', () => {
   fetch('data.json')
     .then(response => response.json())
     .then(data => {
       imagesData = data;
+      shuffleArray(imagesData); // Shuffle images on load
       setupCanvas();
       loadImage();
     });
